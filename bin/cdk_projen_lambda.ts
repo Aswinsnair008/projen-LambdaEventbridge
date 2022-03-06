@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-import 'source-map-support/register';
-import * as cdk from 'aws-cdk-lib';
-import { ProjenCdkLambdaEventbridgeStack } from '../lib/projen-cdk-lambda-eventbridge-stack';
+// import 'source-map-support/register';
+import * as cdk from '@aws-cdk/core';
+import { MyCdkAppStack } from '../src/cdk_projen_lambda-stack';
 
 const app = new cdk.App();
-new ProjenCdkLambdaEventbridgeStack(app, 'ProjenCdkLambdaEventbridgeStack', {
+new MyCdkAppStack(app, 'MyCdkAppStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
